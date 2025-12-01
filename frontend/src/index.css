@@ -134,7 +134,7 @@
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
     line-height: 1.5;
-    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-family: "Raleway", sans-serif;
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
@@ -774,7 +774,7 @@
   }
 
   .bg-black {
-    background-color: var(--color-black);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .bg-blue-100 {

@@ -14,7 +14,7 @@ export function VehicleForm({ spot, onSubmit, onCancel }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div className="fixed inset-0 bg-black flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-gray-900">Park Vehicle - Spot {spot.id}</h2>
@@ -77,18 +77,22 @@ export function VehicleForm({ spot, onSubmit, onCancel }) {
             <p className="text-sm text-gray-600 mb-2">Parking Details:</p>
             <div className="space-y-1 text-sm">
               <p className="text-gray-700">
-                <span className="text-gray-500">Spot Type:</span> {spot.type.charAt(0).toUpperCase() + spot.type.slice(1)}
+                <span className="text-gray-500">Spot Type:</span>{" "}
+                {spot.type.charAt(0).toUpperCase() + spot.type.slice(1)}
               </p>
               <p className="text-gray-700">
-                <span className="text-gray-500">Rate:</span> {
-                  spot.type === 'vip' ? '$10/hour' :
-                  spot.type === 'handicap' ? 'Free' :
-                  spot.type === 'motorcycle' ? '$3/hour' :
-                  '$5/hour'
-                }
+                <span className="text-gray-500">Rate:</span>{" "}
+                {spot.type === "vip"
+                  ? "$10/hour"
+                  : spot.type === "handicap"
+                  ? "Free"
+                  : spot.type === "motorcycle"
+                  ? "$3/hour"
+                  : "$5/hour"}
               </p>
               <p className="text-gray-700">
-                <span className="text-gray-500">Entry Time:</span> {new Date().toLocaleTimeString()}
+                <span className="text-gray-500">Entry Time:</span>{" "}
+                {new Date().toLocaleTimeString()}
               </p>
             </div>
           </div>
